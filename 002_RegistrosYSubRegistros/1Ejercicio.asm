@@ -9,6 +9,10 @@ option casemap:none
 include C:/masm32/include/masm32rt.inc
 
 .data
+    t1 db "EAX = ",0
+    t2 db "EBX = ",0
+    t3 db "ECX = ",0
+    t4 db "EDX = ",0
     vEAX dd ?
     vEBX dd ?
     vECX dd ?
@@ -45,15 +49,24 @@ start:
     
     print addr msg1,13,10
 
+    ;METODO REGULAR
     invoke dwtoa, vEAX, addr buf
-    print addr buf,13,10
-    invoke dwtoa, vEBX, addr buf
-    print addr buf,13,10
-    invoke dwtoa, vECX, addr buf
-    print addr buf,13,10
-    invoke dwtoa, vEDX, addr buf
+    print addr t1
     print addr buf,13,10
 
+    invoke dwtoa, vEBX, addr buf
+    print addr t2
+    print addr buf,13,10
+
+    invoke dwtoa, vECX, addr buf
+    print addr t3
+    print addr buf,13,10
+
+    invoke dwtoa, vEDX, addr buf
+    print addr t4
+    print addr buf,13,10
+
+    print addr msg0,13,10
     exit
 end start
 
