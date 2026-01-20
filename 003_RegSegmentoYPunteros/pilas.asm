@@ -1,4 +1,6 @@
 ;EJEMPLO 2 , PILAS
+;APILAR 3 NUMEROS 10,20,30 luego desapilarlos y mostrarlos en pantalla
+;explicar como cambia ESP tras cada operacion
 .386
 .model flat,stdcall
 option casemap:none
