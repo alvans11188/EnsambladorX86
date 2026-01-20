@@ -1,7 +1,7 @@
 ;Ejercicio 1: Imprimir direcciones
 ; Objetivo: declara tres valores (x, y, z) en la seccion .data.
 ;Mostra sus direcciones (offset) y un texto que diga "modo flat activo - segmentos unificados".
-
+; en el modelo loa las direcciones son lineales estan unificados ene ste modo
 .386
 .model flat,stdcall
 option casemap:none
